@@ -1,0 +1,302 @@
+body {
+  background-color: #f1f3f4;
+}
+
+.lightTheme {
+  background-color: #f1f3f4;
+  /* float: left; */
+  height: 100%;
+  width: 100%;
+}
+
+.darkTheme {
+  background-color: black;
+  /* float: left; */
+  /* height: 100vh; */
+  height: 100%;
+  width: 100%;
+}
+.spinner-border {
+  width: 2.5rem;
+  height: 2.5rem;
+  font-size: 30px;
+  margin-left: 50%;
+  margin-top: 10%;
+}
+
+.Container {
+  width: 100%;
+  float: left;
+  padding: 2% 14% 5% 14%;
+  /* margin-top: 7%; */
+}
+
+.headerContainer {
+  background-color: #6671E4;
+  border-bottom-left-radius: 100px 100px;
+  /* position: fixed;
+  top: 0; */
+  width: 100%;
+  padding: 2% 14% 4% 14%;
+  /* z-index: -1; */
+}
+
+.headerTitleContainer {
+  width: 60%;
+  float: left;
+}
+
+.headerTitle {
+  color: white;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.headerTitle:hover {
+  text-decoration: none;
+  color: white;
+}
+
+.headerIconsContainer {
+  text-align: right;
+  width: 40%;
+  float: left;
+}
+
+.iconStyle {
+  color: white;
+}
+
+.filtericonStyle{
+    color: #5C64E1;
+}
+
+.inputPrepend{
+    background-color:white;
+    border:0px solid red;
+}
+.customInput{
+    border:0px solid red ;
+}
+.borderRight{
+    border-right: 1px solid #CED4DA;
+}
+.filterContainer {
+  background-color: white;
+  height: 65px;
+  float: left;
+  width: 100%;
+  background-color: white;
+  margin-top: -30px;
+  padding:3px;
+  /* height: 12%; */
+  border-radius: 4px;
+}
+
+.jobsContainer {
+  margin-top: 3%;
+}
+
+.JobCard {
+  min-height: 200px;
+  min-width: 280px;
+  max-width: 280px;
+  color: grey;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-right: 50px;
+  border-radius: 4px;
+  padding: 12px;
+  cursor: pointer;
+  float: left;
+}
+
+.darkJobCard {
+  background-color: #555758;
+}
+
+.lightJobCard {
+  background-color: white;
+}
+
+.jobTitleCard{
+    /* margin-bottom: 130px;
+    margin-top: 130px; */
+    float: left;
+    width: 100%;
+    background-color: white;
+    margin-top: -40px;
+}
+
+.mainIcon{
+ background-color: #da5050;
+  width: 100px;
+  height: 100px;
+}
+
+.JobCard-Image-icon {
+  background-color: #da5050;
+  width: 50px;
+  height: 50px;
+  min-width: 50px;
+  min-height: 50px;
+  margin-top: -30px;
+  border-radius: 8px;
+  border: 1px solid #dae0e5;
+}
+
+.ImageContainer{
+    width: 20%;
+}
+
+.companyButton{
+    background-color: #EEEEFC;
+    height: 45px;
+    width: 129px;
+    padding: 14px;
+    border-radius: 3px;
+    float: right;
+    font-size: 12px;
+    margin-top: 20px;
+    margin-right: 30px;
+    text-align: center;
+
+}
+
+.applyButton{
+    background-color: #EEEEFC;
+    height: 45px;
+    width: 129px;
+    padding: 14px;
+    border-radius: 3px;
+    float: right;
+    font-size: 12px;
+    /* margin-top: 20px; */
+    margin-right: 30px;
+    color: white;
+    font-weight: 800;
+    text-align: center;
+}
+
+.applyButton:hover{
+   text-decoration: none;
+   color: grey;
+   background-color: #7079dc;
+}
+
+.applyDetails{
+    float: left;
+}
+
+.titleBox{
+    width: 60%;
+    padding-top: 20px;
+    padding-left: 5px;
+}
+
+.jobTitle {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.subText {
+  font-size: 12px;
+  margin-right: 4px;
+  color: #BCC5D0;
+  font-weight: 600;
+}
+
+.blackColor {
+  color: black;
+}
+
+.whiteColor {
+  color: white;
+}
+
+.blueText {
+  color: #646BC4;
+  font-size: 14px;
+  font-weight: 600;
+
+}
+
+.margin10 {
+  margin-top: 10px;
+}
+
+.jobdetailsContainer {
+  background-color: white;
+  padding: 40px;
+  margin-top: 40px;
+  float: left;
+}
+
+.headerBox{
+    background-color: white;
+}
+
+h3{
+    font-size: 14px;
+    font-weight: bold;
+}
+.left{
+    float: left;
+}
+
+.howToApply {
+    background-color: #6571E2;
+    width: 100%;
+    border-radius: 3px;
+    min-height: 50px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    padding: 40px;
+    float: left;
+}
+
+.howToApply *{
+    color: white;
+}
+
+.applyButton{
+    background-color: #5964DF;
+}
+
+.errorMesage{
+    text-align: center;
+    margin-top: 50px;
+    font-size: 15px;
+    font-weight: bold;
+    color: #d04a4a;
+}
+
+.searchButton{
+  width: 150px;
+  margin-left: 50px;
+  margin-bottom: -2px;
+}
+
+.checkbox{
+  margin-left: 10px;
+  margin-top: 5px;
+}
+
+.message{
+    text-align: center;
+    margin-top: 50px;
+    font-size: 15px;
+    font-weight: bold;
+    color: #65686a;
+}
+
+@media (min-width: 0px) and (max-width: 425px) {
+  .headerContainer {
+    padding: 5% 5% 5% 8%;
+  }
+
+  .spinner-border {
+    margin-left: 45%;
+    margin-top: 40%;
+  }
+}

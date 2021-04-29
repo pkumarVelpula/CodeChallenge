@@ -1,25 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { Switch, Route } from "react-router-dom";
+import { observer } from "mobx-react-lite";
+import StoreContext from "./Stores/StoreContext";
+import "bootstrap/dist/css/bootstrap.min.css";
+import "./static/customStyles.css";
+import Header from "./Components/Header";
+import routes from "./routes";
 
-function App() {
+const App = () => {
+  const store = React.useContext(StoreContext);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className={store.theme ? "darkTheme" : "lightTheme"}>
+      <Header />
+      <Switch>
+        {routes.map((route) => (
+          <Route
+            key={route}
+            path={route.path}
+            exact={route.exact}
+            children={<route.component />}
+          />
+        ))}
+      </Switch>
     </div>
   );
-}
+};
 
-export default App;
+export default observer(App);
