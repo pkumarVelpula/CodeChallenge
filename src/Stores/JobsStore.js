@@ -35,7 +35,7 @@ class JobsStore {
     this.loadingJobsError = false;
 
     fetch(
-      `https://jobs.github.com/positions.json?${filterQuery}`,
+      `/positions.json?${filterQuery}`,
       {
         method: "GET",
         headers: {
@@ -59,7 +59,7 @@ class JobsStore {
     this.loadingJobDetails = true;
     this.loadingJobsDetailsError = false;
     fetch(
-      `https://jobs.github.com/positions/${id}.json`,
+      `/positions/${id}.json`,
       {
         method: "GET",
         headers: {

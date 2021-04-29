@@ -1,0 +1,5 @@
+# Redirects from what the browser requests to what we serve
+
+
+/positions.json?*  https://jobs.github.com/:splat  200
+/positions/*  https://jobs.github.com/:splat  200
