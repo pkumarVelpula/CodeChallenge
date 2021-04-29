@@ -36,7 +36,7 @@ function JobsDetails() {
                 <h3 style={{fontSize:"15px"}}>{store.jobDetails?.company}</h3>
                 <p style={{color:"#A7ADB6"}}>{store.jobDetails?.company_url}</p>
                 </div>
-                <a href={store.jobDetails.company_url} target="_blank" className="companyButton">
+                <a href={store.jobDetails.company_url} target="_blank" rel="noreferrer" className="companyButton">
                   Company Site
                 </a>
               </div>
@@ -53,7 +53,7 @@ function JobsDetails() {
                 <h5>{store.jobDetails?.title}</h5>
                 <p className="blueText">{store.jobDetails?.location}</p>
                 </div>
-                <a href={store.jobDetails.company_url} target="_blank" className="applyButton">
+                <a href={store.jobDetails.company_url} target="_blank" rel="noreferrer" className="applyButton">
                  Apply Now
                 </a>
                 
