@@ -19,8 +19,6 @@ class JobsStore {
 
   jobDetails = null;
 
-  domain = 'https://jobs.github.com';
-
   setTheme = () => {
     document.body.style = `background: ${this.theme ? "#f1f3f4" : "black"}`;
     this.theme = !this.theme;
@@ -37,7 +35,7 @@ class JobsStore {
     this.loadingJobsError = false;
 
     fetch(
-      `${this.domain}/positions.json?${filterQuery}`,
+      `/positions.json?${filterQuery}`,
       {
         method: "GET",
         headers: {
@@ -61,7 +59,7 @@ class JobsStore {
     this.loadingJobDetails = true;
     this.loadingJobsDetailsError = false;
     fetch(
-      `${this.domain}/positions/${id}.json`,
+      `/positions/${id}.json`,
       {
         method: "GET",
         headers: {
