@@ -12,7 +12,7 @@ function JobsDetails() {
 
   React.useEffect(() => {
     store.getJobDetails(id);
-  }, []);
+  }, [store,id]);
 
   return (
     <div className="Container">

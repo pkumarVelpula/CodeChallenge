@@ -11,11 +11,9 @@ const JobsList = () => {
 
   React.useEffect(() => {
     store.getJobs();
-  }, []);
+  }, [store]);
 
-  {
-    console.log(store.loadingJobs);
-  }
+  
   return (
     <div className="Container">
       <Filter />
