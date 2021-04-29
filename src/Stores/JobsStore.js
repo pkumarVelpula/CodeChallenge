@@ -41,7 +41,7 @@ class JobsStore {
     this.loadingJobsError = false;
 
     fetch(
-      `/cors-proxy/${url}/positions.json?${filterQuery}`,
+      `/cors-proxy/${this.url}/positions.json?${filterQuery}`,
       {
         method: "GET",
         headers: {
@@ -65,7 +65,7 @@ class JobsStore {
     this.loadingJobDetails = true;
     this.loadingJobsDetailsError = false;
     fetch(
-      `/cors-proxy/${url}/positions/${id}.json`,
+      `/cors-proxy/${this.url}/positions/${id}.json`,
       {
         method: "GET",
         headers: {
