@@ -28,12 +28,6 @@ class JobsStore {
     this.jobs = [];
   }
 
-  url = "https://jobs.github.com/";
-
-  // `/positions.json?${filterQuery}`,
-
-
-
 
   getJobs = (filterQuery) => {
     this.resetStore();
@@ -41,7 +35,7 @@ class JobsStore {
     this.loadingJobsError = false;
 
     fetch(
-      `/cors-proxy/${url}/positions.json?${filterQuery}`,
+      `/positions.json?${filterQuery}`,
       {
         method: "GET",
         headers: {
@@ -65,7 +59,7 @@ class JobsStore {
     this.loadingJobDetails = true;
     this.loadingJobsDetailsError = false;
     fetch(
-      `/cors-proxy/${url}/positions/${id}.json`,
+      `/positions/${id}.json`,
       {
         method: "GET",
         headers: {
