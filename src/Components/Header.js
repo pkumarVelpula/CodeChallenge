@@ -9,7 +9,6 @@ import { BsFillBrightnessHighFill, BsMoon } from "react-icons/bs";
 function Header() {
   const store = React.useContext(StoreContext);
     
-console.log(store);
   return (
     <div className="headerContainer">
       <div className="headerTitleContainer">
