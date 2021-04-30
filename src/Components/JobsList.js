@@ -13,17 +13,15 @@ const JobsList = () => {
     store.getJobs();
   }, [store]);
 
-  
   return (
-    <div className="Container">
+    <div >
       <Filter />
-
       {store.loadingJobs ? (
         <Spinner animation="border" variant="primary" />
       ) : null}
 
       {store.jobs.length ? (
-        <div>
+        <div className="listBox">
           {store.jobs.map((each) => (
             <Link to={`/jobdetails/${each.id}`} key={each.id}>
               <JobCard theme={store.theme} jobDetails={each} key={each.id} />

@@ -1,8 +1,7 @@
 import React from "react";
 import { observer } from "mobx-react-lite";
 import PropTypes from 'prop-types';
-import {calculateHoursOrDays} from '../utils'
-
+import {calculateHoursOrDays} from '../utils';
 
 const JobCard = (props) => {
   return (
@@ -23,7 +22,5 @@ JobCard.propTypes ={
   theme : PropTypes.bool.isRequired,
   jobDetails: PropTypes.object.isRequired
 };
-
-
 
 export default observer(JobCard);

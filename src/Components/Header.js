@@ -3,7 +3,6 @@ import { observer } from "mobx-react-lite";
 import StoreContext from "../Stores/StoreContext";
 import Switch from "@material-ui/core/Switch";
 import {Link} from "react-router-dom";
-
 import { BsFillBrightnessHighFill, BsMoon } from "react-icons/bs";
 
 function Header() {
@@ -13,7 +12,6 @@ function Header() {
     <div className="headerContainer">
       <div className="headerTitleContainer">
       <Link to={`/`} className="headerTitle">  devjobs</Link>
-       
       </div>
       <div className="headerIconsContainer">
         <BsFillBrightnessHighFill className="iconStyle" />

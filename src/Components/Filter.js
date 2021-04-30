@@ -31,14 +31,18 @@ function Filter() {
   };
 
   return (
-    <div className="filterContainer">
+    <div className={`filterContainer ${
+      store.theme ? "darkJobCard" : "lightJobCard"
+    }`}>
       <Navbar>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
-          <InputGroup className="mb-2 borderRight" >
+          <InputGroup className="borderRight" >
+          <InputGroup.Prepend>
             <InputGroup.Text className="inputPrepend" >
               <BsSearch className="filtericonStyle"/>
             </InputGroup.Text>
+            </InputGroup.Prepend>
             <FormControl
               placeholder="Filter By title, Companies,expertise"
               onChange={(e) => {
@@ -55,8 +59,8 @@ function Filter() {
               </InputGroup.Text>
             </InputGroup.Prepend>
             <FormControl
-              placeholder="Username"
-              aria-label="Username"
+              placeholder="Filter by location"
+              aria-label="Filter by location"
               aria-describedby="basic-addon1"
               onChange={(event) => {
                 handleChange(event, "location");
@@ -66,7 +70,7 @@ function Filter() {
             />
           </InputGroup>
 
-          <InputGroup  className=" checkbox">
+          <InputGroup  className="checkbox">
             <Form.Check
               type="checkbox"
               label="Full time Only"
@@ -81,7 +85,7 @@ function Filter() {
             </Button>
           </InputGroup>
         </Navbar.Collapse>
-      </Navbar>
+      </Navbar> 
     </div>
   );
 }

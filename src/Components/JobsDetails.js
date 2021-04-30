@@ -12,58 +12,80 @@ function JobsDetails() {
 
   React.useEffect(() => {
     store.getJobDetails(id);
-  }, [store,id]);
+  }, [store, id]);
 
   return (
-    <div className="Container">
-      {store.loadingJobDetails && !store.loadingJobsDetailsError  ? (
+    <div>
+      {store.loadingJobDetails && !store.loadingJobsDetailsError ? (
         <Spinner animation="border" variant="primary" />
       ) : (
         <>
           {store.jobDetails !== null ? (
-            <div >
-              <div className="jobTitleCard">
-                {store.jobDetails?.company_logo ? (
-                  <img
-                    src={store.jobDetails?.company_logo}
-                    className="mainIcon left ImageContainer"
-                    alt="img"
-                  />
-                ) : (
-                  <div className="mainIcon left"></div>
-                )}
+            <div>
+              <div
+                className={`jobTitleCard ${
+                  store.theme ? "darkJobCard" : "lightJobCard"
+                }`}
+              >
+                <img
+                  src={store.jobDetails?.company_logo}
+                  className="detailsIcon left"
+                  alt="img"
+                />
                 <div className="left titleBox">
-                <h3 style={{fontSize:"15px"}}>{store.jobDetails?.company}</h3>
-                <p style={{color:"#A7ADB6"}}>{store.jobDetails?.company_url}</p>
+                  <h3 style={{ fontSize: "15px" }}>
+                    {store.jobDetails?.company}
+                  </h3>
+                  <p style={{ color: "#A7ADB6" }}>
+                    {store.jobDetails?.company_url}
+                  </p>
                 </div>
-                <a href={store.jobDetails.company_url} target="_blank" rel="noreferrer" className="companyButton">
+                <a
+                  href={store.jobDetails.company_url}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="companyButton"
+                >
                   Company Site
                 </a>
               </div>
 
-              <div className="jobdetailsContainer">
+              <div
+                className={`jobdetailsContainer ${
+                  store.theme ? "darkJobCard" : "lightJobCard"
+                }`}
+              >
                 <div className="margin10">
                   <span className="subText">
                     {calculateHoursOrDays(store.jobDetails?.created_at)}
-                  </span><span className="subText" style={{fontSize:'15px'}}>.</span>
+                  </span>
+                  <span className="subText" style={{ fontSize: "15px" }}>
+                    .
+                  </span>
                   <span className="subText">{store.jobDetails?.type}</span>
                 </div>
-                <div >
+                <div>
                   <div className="applyDetails">
-                <h5>{store.jobDetails?.title}</h5>
-                <p className="blueText">{store.jobDetails?.location}</p>
+                    <h5>{store.jobDetails?.title}</h5>
+                    <p className="blueText">{store.jobDetails?.location}</p>
+                  </div>
+                  <a
+                    href={store.jobDetails.company_url}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="applyButton"
+                  >
+                    Apply Now
+                  </a>
                 </div>
-                <a href={store.jobDetails.company_url} target="_blank" rel="noreferrer" className="applyButton">
-                 Apply Now
-                </a>
-                
+                <div className="left">
+                  {parse(store.jobDetails.description)}
                 </div>
-                <div className="left">{parse(store.jobDetails.description)}</div>
               </div>
 
-              <div className="howToApply"> 
-              <h3>How to Apply</h3>
-                  <p>{parse(store.jobDetails?.how_to_apply)}</p>
+              <div className="howToApply">
+                <h3>How to Apply</h3>
+                <div>{parse(store.jobDetails?.how_to_apply)}</div>
               </div>
             </div>
           ) : (

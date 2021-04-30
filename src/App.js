@@ -9,10 +9,11 @@ import routes from "./routes";
 
 const App = () => {
   const store = React.useContext(StoreContext);
-
+ 
   return (
-    <div className={store.theme ? "darkTheme" : "lightTheme"}>
+    <div  className={store.theme ?"darkTheme":"lightTheme"} >
       <Header />
+      <div className="Container">
       <Switch>
         {routes.map((route) => (
           <Route
@@ -23,6 +24,8 @@ const App = () => {
           />
         ))}
       </Switch>
+      </div>
+
     </div>
   );
 };
