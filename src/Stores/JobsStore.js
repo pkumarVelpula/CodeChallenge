@@ -33,9 +33,10 @@ class JobsStore {
     this.resetStore();
     this.loadingJobs = true;
     this.loadingJobsError = false;
+    const url = process.env.NODE_ENV ==="development"?'/positions':'/api/positions';
 
     fetch(
-      `/positions.json?${filterQuery}`,
+      `${url}.json?${filterQuery}`,
       {
         method: "GET",
         headers: {
@@ -58,8 +59,10 @@ class JobsStore {
   getJobDetails = (id) => {
     this.loadingJobDetails = true;
     this.loadingJobsDetailsError = false;
+    const url = process.env.NODE_ENV ==="development"?'/positions':'/api/positions';
+
     fetch(
-      `/positions/${id}.json`,
+      `${url}/${id}.json`,
       {
         method: "GET",
         headers: {
